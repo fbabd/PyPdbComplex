@@ -1,30 +1,22 @@
 """
-Setup configuration for PyPDBcomplex package
+Setup configuration for PyPdbComplex package
 """
 from setuptools import setup, find_packages
 from pathlib import Path
 
-# Read the README file
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text(encoding='utf-8')
 
-# Read requirements
-requirements = []
-requirements_path = this_directory / "requirements.txt"
-if requirements_path.exists():
-    requirements = requirements_path.read_text().strip().split('\n')
-    requirements = [req.strip() for req in requirements if req.strip() and not req.startswith('#')]
-
 setup(
-    name="PyPDBcomplex",
+    name="PyPdbComplex",
     version="0.1.0",
-    author="Faisal B Ashraf",  
-    author_email="faisal.b.ashraf@gmail.com",   
+    author="Faisal B Ashraf",
+    author_email="faisal.b.ashraf@gmail.com",
     description="Comprehensive toolkit for protein-protein complex structure analysis",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/fbabd/PyPDBcomplex",   
-    packages=find_packages(),
+    url="https://github.com/fbabd/PyPdbComplex",
+    packages=find_packages(exclude=['PyPdbComplex_v1', 'PyPdbComplex_v1.*', 'examples*', 'tests*']),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Science/Research",
@@ -39,7 +31,11 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.8",
-    install_requires=requirements,
+    install_requires=[
+        "numpy>=1.20.0",
+        "pandas>=1.3.0",
+        "matplotlib>=3.4.0",
+    ],
     extras_require={
         'dev': [
             'pytest>=7.0',
@@ -72,8 +68,8 @@ setup(
         'protein analysis',
     ],
     project_urls={
-        'Documentation': 'https://github.com/fbabd/PyPDBcomplex#readme',
-        'Source': 'https://github.com/fbabd/PyPDBcomplex',
-        'Bug Reports': 'https://github.com/fbabd/PyPDBcomplex/issues',
+        'Documentation': 'https://github.com/fbabd/PyPdbComplex#readme',
+        'Source': 'https://github.com/fbabd/PyPdbComplex',
+        'Bug Reports': 'https://github.com/fbabd/PyPdbComplex/issues',
     },
 )

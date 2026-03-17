@@ -1,9 +1,9 @@
-# PyPDBcomplex : Protein-Protein Complex Analysis Toolkit
+# PyPdbComplex : Protein-Protein Complex Analysis Toolkit
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**PyPDBcomplex** is a comprehensive Python toolkit for analyzing protein structures, with a focus on antibody-antigen complexes. It provides easy-to-use functions for extracting detailed structural features, analyzing molecular interactions, and comparing multiple structures.
+**PyPdbComplex** is a comprehensive Python toolkit for analyzing protein structures, with a focus on antibody-antigen complexes. It provides easy-to-use functions for extracting detailed structural features, analyzing molecular interactions, and comparing multiple structures.
 
 ## 🚀 Features
 
@@ -30,8 +30,8 @@
 
 ```bash
 # Clone or download the repository
-git clone https://github.com/fbabd/PyPDBcomplex.git
-cd PyPDBcomplex
+git clone https://github.com/fbabd/PyPdbComplex.git
+cd PyPdbComplex
 
 # Install in development mode
 pip install -e .
@@ -57,9 +57,9 @@ pip install -e ".[all]"
 ### Basic Usage
 
 ```python
-from PyPDBcomplex.pdbparser import parse_pdb
-from PyPDBcomplex.interface import compute_interface
-from PyPDBcomplex.contacts import analyze_contacts
+from PyPdbComplex.pdbparser import parse_pdb
+from PyPdbComplex.interface import compute_interface
+from PyPdbComplex.contacts import analyze_contacts
 
 # Parse PDB file
 cx = parse_pdb("protein.pdb")
@@ -83,7 +83,7 @@ print(f"H-bonds: {contacts.get_contact_counts()['hydrogen_bond']}")
 ### Comprehensive Feature Extraction
 
 ```python
-from PyPDBcomplex.residue_features import (
+from PyPdbComplex.residue_features import (
     extract_residue_features,
     features_to_dataframe,
     identify_hotspots
@@ -110,7 +110,7 @@ print(f"Identified {len(hotspots)} hotspot residues")
 ### Multi-Complex Comparison
 
 ```python
-from PyPDBcomplex.multicomplex.multi_analysis import (
+from PyPdbComplex.multicomplex.multi_analysis import (
     MultiComplexAnalyzer,
     AnalysisConfig
 )
@@ -192,7 +192,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 Citation
 
-If you use PyPDBcomplex in your research, please cite:
+If you use PyPdbComplex in your research, please cite:
 
 ```bibtex
 
@@ -209,7 +209,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - **Documentation**: See `examples/` for comprehensive tutorials
-- **Issues**: Report bugs at https://github.com/fbabd/PyPDBcomplex/issues
+- **Issues**: Report bugs at https://github.com/fbabd/PyPdbComplex/issues
 - **Questions**: Open a discussion on GitHub
 
 ---

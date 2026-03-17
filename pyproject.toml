@@ -1,9 +1,9 @@
 [build-system]
-requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "PyPDBcomplex"
+name = "PyPdbComplex"
 version = "0.1.0"
 description = "Comprehensive toolkit for protein-protein complex structure analysis"
 readme = "README.md"
@@ -61,14 +61,14 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/fbabd/PyPDBcomplex"
-Documentation = "https://github.com/fbabd/PyPDBcomplex#readme"
-Repository = "https://github.com/fbabd/PyPDBcomplex"
-"Bug Reports" = "https://github.com/fbabd/PyPDBcomplex/issues"
+Homepage = "https://github.com/fbabd/PyPdbComplex"
+Documentation = "https://github.com/fbabd/PyPdbComplex#readme"
+Repository = "https://github.com/fbabd/PyPdbComplex"
+"Bug Reports" = "https://github.com/fbabd/PyPdbComplex/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["PyPDBcomplex*"]
+include = ["PyPDBcomplex", "PyPDBcomplex.*"]
 exclude = ["tests*", "examples*"]
 
 [tool.setuptools.package-data]
